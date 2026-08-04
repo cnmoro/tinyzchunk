@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tinyzchunk"
+version = "0.3.0"
+description = "GPU-free, tokenizer-free chunker for RAG (EN + PT-BR). Robust to PDF/OCR noise, markdown, code and CRLF. Weights fetched from HuggingFace on first use."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "Apache-2.0" }
+authors = [{ name = "Carlo Moro" }]
+keywords = ["chunking", "rag", "text-splitter", "nlp", "retrieval", "semantic-chunking", "portuguese"]
+dependencies = ["numpy>=1.20", "huggingface_hub>=0.20"]
+
+[project.urls]
+Homepage = "https://huggingface.co/cnmoro/tinyzchunk"
+Repository = "https://github.com/cnmoro/tinyzchunk"
+
+[tool.setuptools]
+packages = ["tinyzchunk"]
+
+[tool.setuptools.package-data]
+# weights intentionally NOT bundled: they are fetched from the HuggingFace
+# repo on first use.

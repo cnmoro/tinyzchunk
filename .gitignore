@@ -1,0 +1,19 @@
+# weights are fetched from HuggingFace (tracked downloads), not committed
+*.npz
+
+# large corpora / labels
+data/
+DocsEventoFinal/
+
+# the original zchunk repo (separate git repository)
+zchunk/
+
+# python build artifacts
+__pycache__/
+*.pyc
+build/
+dist/
+*.egg-info/
+.venv/
+venv/
+AGENT_CONTEXT.md
